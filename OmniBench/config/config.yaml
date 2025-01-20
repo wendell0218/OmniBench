@@ -1,0 +1,146 @@
+HOST_AGENT: {
+  VISUAL_MODE: True, # Whether to use the visual mode
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://api.openai.com/v1/chat/completions", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-",  # The OpenAI API key, begin with sk-
+  # API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
+  # API_MODEL: "gpt-4-vision-preview",  # The only OpenAI model by now that accepts visual input
+
+  ### Comment above and uncomment these if using "aoai".
+  # API_TYPE: "aoai" , # The API type, "openai" for the OpenAI API, "aoai" for the Azure OpenAI.  
+  # API_BASE: "YOUR_ENDPOINT", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API. As for the aoai, it should be https://{your-resource-name}.openai.azure.com
+  # API_KEY: "YOUR_KEY",  # The aoai API key
+  # API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
+  # API_MODEL: "YOUR_MODEL",  # The only OpenAI model by now that accepts visual input
+  # API_DEPLOYMENT_ID: "gpt-4-visual-preview", # The deployment id for the AOAI API
+  
+  ### For Azure_AD
+  # AAD_TENANT_ID: "YOUR_TENANT_ID", # Set the value to your tenant id for the llm model
+  # AAD_API_SCOPE: "YOUR_SCOPE", # Set the value to your scope for the llm model
+  # AAD_API_SCOPE_BASE: "YOUR_SCOPE_BASE" # Set the value to your scope base for the llm model, whose format is API://YOUR_SCOPE_BASE, and the only need is the YOUR_SCOPE_BASE
+  
+  ### Qwen
+  "API_TYPE": "Qwen" ,
+  "API_KEY": "sk-544b4461bb1a445c830dc8f523351b1a",  
+  "API_MODEL": "qwen-vl-max"
+}
+
+APP_AGENT: {
+  VISUAL_MODE: True, # Whether to use the visual mode
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://api.g4f.icu/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-HM2tRkH6XsSeICVH32C8A0D1043b4cA3A7F373143bAdEdB0",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "claude-3-opus-20240229",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://api2.aigcbest.top/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-SfkISsXSTrtB3LFJF55775B9B60d4f5fAe235fF93fF39b05",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "gpt-4o-2024-05-13",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://35.aigcbest.top/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-RL6MJGZ80OYSj6lY1a431aBaE55c439d9321A3B95d1aF446",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "gpt-4o-2024-08-06",  # The only OpenAI model by now that accepts visual input
+
+  API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  API_BASE: "https://demo.voapi.top/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  API_KEY: "sk-wfsujPHbQJCmu6DfO1wETcUFeleeyUeAdD1aAXGm45JWyaE5",  # linux.do
+  # API_KEY: "sk-pmvyTXmDG5GcvYulyHUXiSC26si4KOkM84bz9jgoU3MJ5OnJ", # 290590318@qq.com
+  API_MODEL: "gpt-4o-2024-08-06",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "http://110.40.41.167:21531/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-H7db4YDmB3jvmNNHA630E0E2EbFe42E3919d36508111E749",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "gpt-4o-2024-08-06",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://chat.zhucn.org/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-5dmB43SJ9yWCORzw1935A48c2156406a8b2045AfB68033D3",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "gpt-4o",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://ddos.geek-it.asia/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-41k8edvfalrFSrTU70279cFb3bBe4aF6Ad93A3021b3c1766",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "gpt-4o",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://api.smnet.asia/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-94T52Z4HHrhaEn8o5eD4Ac27D9Dd48BaBb096fC8FaAb8c6b",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "claude-3-opus-20240229",  # The only OpenAI model by now that accepts visual input
+
+  # API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  # API_BASE: "https://llm.indrin.cn/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  # API_KEY: "sk-7DeFwqxWk5vHt9re17B91583292348B2A129CeFb1b07F314",  # The OpenAI API key, begin with sk-
+  # API_MODEL: "gpt-4o",  # The only OpenAI model by now that accepts visual input
+
+
+
+  # ### Qwen
+  # "API_TYPE": "Qwen" ,
+  # "API_KEY": "sk-544b4461bb1a445c830dc8f523351b1a",  
+  # "API_MODEL": "qwen-vl-max"
+  
+  ### Comment above and uncomment these if using "aoai".
+  # API_TYPE: "aoai" , # The API type, "openai" for the OpenAI API, "aoai" for the Azure OpenAI.  
+  # API_BASE: "YOUR_ENDPOINT", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API. As for the aoai, it should be https://{your-resource-name}.openai.azure.com
+  # API_KEY: "YOUR_KEY",  # The aoai API key
+  # API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
+  # API_MODEL: "YOUR_MODEL",  # The only OpenAI model by now that accepts visual input
+  # API_DEPLOYMENT_ID: "gpt-4-visual-preview", # The deployment id for the AOAI API
+  
+  ### For Azure_AD
+  # AAD_TENANT_ID: "YOUR_TENANT_ID", # Set the value to your tenant id for the llm model
+  # AAD_API_SCOPE: "YOUR_SCOPE", # Set the value to your scope for the llm model
+  # AAD_API_SCOPE_BASE: "YOUR_SCOPE_BASE" # Set the value to your scope base for the llm model, whose format is API://YOUR_SCOPE_BASE, and the only need is the YOUR_SCOPE_BASE
+  }
+
+BACKUP_AGENT: {
+  VISUAL_MODE: True, # Whether to use the visual mode
+
+  API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
+  API_BASE: "https://api.openai.com/v1/chat/completions", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
+  API_KEY: "sk-",  # The OpenAI API key, begin with sk-
+  API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
+  API_MODEL: "gpt-4-vision-preview",  # The only OpenAI model by now that accepts visual input
+
+
+  ### Comment above and uncomment these if using "aoai".
+  # API_TYPE: "aoai" , # The API type, "openai" for the OpenAI API, "aoai" for the Azure OpenAI.  
+  # API_BASE: "YOUR_ENDPOINT", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API. As for the aoai, it should be https://{your-resource-name}.openai.azure.com
+  # API_KEY: "YOUR_KEY",  # The aoai API key
+  # API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
+  # API_MODEL: "YOUR_MODEL",  # The only OpenAI model by now that accepts visual input
+  # API_DEPLOYMENT_ID: "gpt-4-visual-preview", # The deployment id for the AOAI API
+  
+  ### For Azure_AD
+  # AAD_TENANT_ID: "YOUR_TENANT_ID", # Set the value to your tenant id for the llm model
+  # AAD_API_SCOPE: "YOUR_SCOPE", # Set the value to your scope for the llm model
+  # AAD_API_SCOPE_BASE: "YOUR_SCOPE_BASE" # Set the value to your scope base for the llm model, whose format is API://YOUR_SCOPE_BASE, and the only need is the YOUR_SCOPE_BASE
+}
+
+
+### For GPT parameters
+MAX_TOKENS: 2000  # The max token limit for the response completion
+MAX_RETRY: 3  # The max retry limit for the response completion
+TEMPERATURE: 0.0  # The temperature of the model: the lower the value, the more consistent the output of the model
+TOP_P: 0.0  # The top_p of the model: the lower the value, the more conservative the output of the model
+TIMEOUT: 60  # The call timeout(s), default is 1 min
+
+### For Qwen2-VL-7B-Instruct
+QWEN2_VL_7B_INSTRUCT: {
+  "MODEL_NAME": "Qwen/Qwen2-VL-7B-Instruct" ,
+  "OPEN_API_BASE": "http://101.42.240.130:12202/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI
+}
+### For qwen-vl-max
+QWEN_VL_MAX: {
+  "MODEL_NAME": "qwen-vl-max" ,
+  "OPEN_API_BASE": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "API_KEY": "sk-a0fe0d8a58814dc5865bb8ab2b0b4871"
+}
+### For OS-Atlas-Pro-7B
+OS_ATLAS_PRO_7B: {
+  "MODEL_NAME": "OS-Atlas-Pro-7B" ,
+  "OPEN_API_BASE": "http://101.42.240.130:12202/v1", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI
+}

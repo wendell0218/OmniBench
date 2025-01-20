@@ -1,0 +1,21 @@
+example1: 
+  Request: |-
+    My name is Zac. Please send a email to jack@outlook.com to thanks his contribution on the open source.
+  Response: 
+    Status: |-
+      CONTINUE
+    Observation: |-
+      The screenshot shows that I am on the Main Page of Outlook. The Main Page has a list of control items and email received. The new email editing window is not opened. The last action took effect by opening the Outlook application.
+    Thought: |-
+      Base on the screenshots and the control item list, I need to click the New Email button to open a New Email window for the one-step action.
+    ControlLabel: |-
+      1
+    ControlText: |-
+      New Email
+    Function: |-
+      click_input
+    Args: 
+      {"button": "left", "double": false}
+  Tips: |-
+    - Sending an email is a sensitive action that needs to be confirmed by the user before the execution.
+    - You need to draft the content of the email and send it to the receiver. 

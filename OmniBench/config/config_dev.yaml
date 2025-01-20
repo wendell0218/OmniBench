@@ -1,0 +1,48 @@
+LOG_ROOT: "D:/CODE_DATA/MLLM_DATA/temp_vm/logs_new_exploration"
+VM_PATH: "D:/CODE_DATA/MLLM_DATA/temp_vm/Windows 11 x64_2/Windows 11 x64.vmx"
+DOCUMENT_PATH: "prompts/documents"
+RETRY_TIMES: 100
+
+CONTROL_BACKEND: "uia"  # The backend for control action, currently we support uia and win32
+MAX_STEP: 200  # The max step limit for completing the user request
+SLEEP_TIME: 7  # The sleep time between each step to wait for the window to be ready
+RECTANGLE_TIME: 1
+FIRST_STEP_WAIT_TIME: 20
+
+SAFE_GUARD: False  # Whether to use the safe guard to prevent the model from doing sensitve operations.
+# The list of widgets that allowed to be selected, in uia backend, it will be used for filter the control_type, while in win32 backend, it will be used for filter the class_name.
+HISTORY_KEYS: ["Step", "Thought", "ControlText", "Action", "Comment", "Results"]  # The keys of the action history for the next step.
+ANNOTATION_COLORS: {
+        "Button": "#FFF68F",
+        "Edit": "#A5F0B5",
+        "TabItem": "#A5E7F0",
+        "Document": "#FFD18A",
+        "ListItem": "#D9C3FE",
+        "MenuItem": "#E7FEC3",
+        "ScrollBar": "#FEC3F8",
+        "TreeItem": "#D6D6D6",
+        "Hyperlink": "#91FFEB",
+        "ComboBox": "#D8B6D4"
+    }
+
+PRINT_LOG: False  # Whether to print the log  
+CONCAT_SCREENSHOT: True  # Whether to concat the screenshot for the control item
+LOG_LEVEL: "DEBUG"  # The log level
+INCLUDE_LAST_SCREENSHOT: True  # Whether to include the last screenshot in the observation
+REQUEST_TIMEOUT: 250  # The call timeout for the GPT-V model
+
+INFERENCE_PROMPT_PATH: "prompts/screen_a11y/inference_prompt_point.yaml"  # The prompt for the action selection
+INFERENCE_PROMPT_CONTROL_PATH: "prompts/screen_a11y/inference_prompt_control.yaml"  # The prompt for the action selection
+PROMPT_PATH: "prompts/screen_a11y/prompt.yaml"  # The prompt for the action selection
+EXAMPLE_PATH: "prompts/screen_a11y/example.yaml"  # The prompt for the action selection
+API_PATH: "prompts/screen_a11y/api.yaml"  # The prompt for the API
+
+
+CLICK_API: "click_input" # The click API
+INPUT_TEXT_API: "type_keys" # The input text API
+INPUT_TEXT_ENTER: False # whether to press enter after typing the text
+
+# Task path
+TASK_PATH: "D:/CODE_DATA/MLLM_DATA/temp_vm/test_DAG/task_DAGs"  # The task path
+SUBTASKS_JSON: "D:/CODE_DATA/MLLM_DATA/temp_vm/test_DAG/subtasks/subtasks.json"  # The subtasks list
+SUBTASKS_EVALUATION_PATH: "D:/CODE_DATA/MLLM_DATA/temp_vm/test_DAG/subtasks/eval_functions"  # The subtasks evaluation list

@@ -1,0 +1,35 @@
+example1: 
+  user: |-
+    ### Subtask Instruction Template
+    Using the file explorer, navigate to '{dir_path}', select the picture '{img_name}', and rotate it left 90 degrees.
+
+    ### Available Parameters
+    [{"dir_path": "C:\\Users\\user\\Desktop\\image\\", "img_name": "envelope.png"}, {"dir_path": "C:\\Users\\user\\Desktop\\image\\", "img_name": "dog.jpg"}]
+
+    ### Controls in Environment
+    ['envelope.png', 'Share', 'Details', 'Type', 'PNG File', 'Size', '11.1 MB', 'File location', 'C:\\Users\\user\\Desktop\\image', 'Date modified', '\u200e8/\u200e6/\u200e2024 \u200f\u200e10:16 PM', 'Dimensions', '\u202a4096 x 4096\u202c', 'Properties', 'image', 'Start backup', 'This PC', 'Local Disk (C:)', 'Users', 'user', 'Desktop', 'image', ' Search image', 'Share', 'Properties', 'Close Tab', 'Add New Tab', 'Back', 'Up to "Desktop" (Alt + Up Arrow)', 'Refresh "image" (F5)', 'New', 'Cut', 'Copy', 'Rename', 'Share', 'Delete', 'Sort', 'View', 'Set as background', 'Rotate left', 'Rotate right', 'More options', 'Details', 'Minimize', 'Maximize', 'Close', 'Name', 'Name', 'Name', 'Name', 'Name', 'Name', 'Name', 'Name', 'Name', 'Name', '', '', 'image', 'beach.jpg', 'cat.jpg', 'city.jpg', 'cliff.jpg', 'cute_dog.jpg', 'dog.jpg', 'envelope.png', 'feast.jpg', 'sports car.jpg', 'sun.jpg', 'System', 'Details', 'Large Icons', 'Start backup', 'This PC', 'Local Disk (C:)', 'Users', 'user', 'Desktop', 'image']
+
+    ### Evaluation Function
+  assistant: |-
+    import os
+    from collections import namedtuple
+    EvalResult = namedtuple('EvalResult', ['success', 'message'])
+    def evaluate_agent_task_completion(dir_path: str, img_name: str) -> EvalResult:
+        # Extract the last directory name
+        dir_path = dir_path.rstrip('/\\')
+        folder_name = os.path.basename(dir_path)
+
+        # Check if navigation to the specified directory was successful
+        if not (check_mouse_clicks(text=folder_name) or check_keyboard_types(text=dir_path)):
+            return EvalResult(False, "Subtask execution failed because agent did not navigate to the specified directory.")
+
+        # Check if the picture 'envelope.png' was selected
+        if not check_mouse_clicks(text=img_name):
+            return EvalResult(False, "Subtask execution failed because agent did not click the picture 'envelope.png'.")
+
+        # Check if the 'rotate left' button was clicked
+        if not check_mouse_clicks(text='rotate left'):
+            return EvalResult(False, "Subtask execution failed because agent did not click the text 'rotate left'.")
+
+        # All checks passed, subtask is considered complete
+        return EvalResult(True, "Subtask completed successfully")
